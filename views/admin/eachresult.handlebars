@@ -1,0 +1,124 @@
+<div class="">
+    {{> Logo}}
+</div>
+<section id="" style="padding-top: 2%;">
+
+    <div class="col-12 text-center">
+        <h4 class="text-secondary"><b>Response to {{course}} Questions</b></h4>
+    </div>
+
+    <div class="text-center my-3">
+        <span>
+            <p class="text-muted"><b>Total Numbers of Contributors</b></p>
+            <button class="my-btn-mobile d-inline btn-danger">{{resultNo}}</button>
+        </span>
+    </div>
+
+    <div class="container">
+        <div class="text-start">
+            <p>
+                Questionnaire is designed to assess Lecture's capacity to deliver lecture effectively well such that the
+                objectives of
+                the course are achieved. Please complete the questionnaire objectively because your response will go a
+                long way in helping
+                the University to address shortcomings in lecture delivery and you can be rest assured of the
+                confidentiality of your response.
+            </p>
+        </div>
+
+        <div class="row question-row" style="margin-top: 0vh !important;">
+            <div class="col-7"></div>
+            <div class="col-5">
+                <ul class="nav text-center">
+                    <li class="list-item mx-auto">
+                        Strongly Agree
+                    </li>
+                    <li class="list-item mx-4">
+                        Agree
+                    </li>
+                    <li class="list-item mx-3">
+                        Neutral
+                    </li>
+                    <li class="list-item mx-3">
+                        Disagree
+                    </li>
+                    <li class="list-item mx-1">
+                        Strongly Disagree
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="row question-row px-0 mx-0">
+
+
+            <div class="col-7 mx-0">
+                {{#each question}}
+                <div class="col-11 py-1 mx-0">
+                    <p class="text-start">
+                        {{this.sn}}. {{this.question}}
+                    </p>
+                </div>
+                {{/each}}
+            </div>
+
+            <div class="col-5 mx-0">
+                {{#each Response}}
+                <div class="col-12 py-1">
+                    <ul class="nav text-center">
+                        <li class="mx-auto list-item ">
+                            {{#if this.stronglyAgree }}
+                            <p>{{this.stronglyAgree}}</p>
+                            {{else}}
+                            <p>0</p>
+                            {{/if}}
+                        </li>
+                        <li class="mx-auto list-item">
+                            {{#if this.agree }}
+                            <p>{{this.agree}}</p>
+                            {{else}}
+                            <p>0</p>
+                            {{/if}}
+                        </li>
+                        <li class="mx-auto list-item">
+                            {{#if this.neutral }}
+                            <p>{{this.neutral}}</p>
+                            {{else}}
+                            <p>0</p>
+                            {{/if}}
+                        </li>
+                        <li class="mx-auto list-item">
+                            {{#if this.disagree }}
+                            <p>{{this.disagree}}</p>
+                            {{else}}
+                            <p>0</p>
+                            {{/if}}
+                        </li>
+                        <li class="mx-auto list-item">
+                            {{#if this.stronglyDisagree }}
+                            <p>{{this.stronglyDisagree}}</p>
+                            {{else}}
+                            <p>0</p>
+                            {{/if}}
+                        </li>
+                    </ul>
+                </div>
+                {{/each}}
+            </div>
+
+
+
+
+
+        </div>
+
+        <div class="col-12 text-center my-5">
+            <button class="my-btn-mobile btn-danger" onclick="display()" type="submit"><b>PRINT</b></button>
+        </div>
+        </form>
+
+
+    </div>
+</section>

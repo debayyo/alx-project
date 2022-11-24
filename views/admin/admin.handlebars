@@ -1,0 +1,219 @@
+<div class="contanier fluid my-0 mb-1">
+    <div class="question1-row row">
+        <div class="col-md-2 bg-dark">
+            <div class="text-white bg-dark" style="width: 280px; height: 100vh;">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item mx-0">
+                        <div class="row" style="padding-top: 3vh;">
+                            <div class="col-md-6 mt-1 text-end">
+                                <img src="/uploads/users.png" class="img-thumbnail" alt="User Image"
+                                    style="width: 100px; height: 130px; border-radius: 50%">
+                            </div>
+                            <div class="col-md-6 mt-3 text-end">
+                                <div class="col-md-6 text-center">
+                                    <p class="mt-1"><b>Welcome</b></p>
+                                    <p class="h5"><b>{{admin.lastname}}</b></p>
+                                    <p class="h5"><span class="text-muted">Level</span><b> {{admin.worklevel}}</b></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                    <li class="row text-center" style="padding-top: 4vh;">
+                        <div class="text-center">
+                            <a><button style="background-color: green;" class="my-btn"><a href="/course/select"><b>Get
+                                            Courses</b></a></button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="row text-center" style="padding-top: 1vh;">
+                        <div class="text-center">
+                            <a> <button style="background-color: blue;" class="my-btn"><a href="/question/all"><b>Get
+                                            Questions</b></a></button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="row text-center" style="padding-top: 1vh;">
+                        <div class="text-center">
+                            <a> <button style="background-color:purple;" class="my-btn"><a href="/course/"><b>Add
+                                            courses</b></a></button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="row text-center" style="padding-top: 1vh;">
+                        <div class="text-center">
+                            <a><button style="background-color: brown;" class="my-btn"><a href="/question/"><b>Add
+                                            questions</b></a></button>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="row text-center" style="padding-top: 1vh;">
+                        <div class="text-center">
+                            <a><button style="background-color: burlywood;" class="my-btn"><a
+                                        href="/result/"><b>Courses/Results</b></a></button>
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="row text-center" style="padding-top: 1vh;">
+                        <div class="text-center">
+                            <a> <button class="my-btn btn-danger"><a href="/result/all"><b>Delete
+                                            Results</b></a></button>
+                            </a>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+
+                <div class="text-center mt-2">
+                    <a href="/admin/login" class="text-center" style="text-decoration: none;">
+                        <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <strong>Sign Out</strong>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+        <div class="col-md-9 text-white">
+            <div class="text-center mb-2">
+                {{>Logo}}
+            </div>
+
+            <div class="question1-row mt-2 text-white row px-5">
+                <div class="col-md-6">
+                    <div class=" ml-3" style="background-color: green; border-radius: 10px">
+                        <div class="text-center">
+                            <h4 class="text-white p-3"><b>Mathematics</b></h4>
+                        </div>
+                        <div class="question1-row row">
+                            <div class="one question1-row row my-4">
+                                <div class="col-9 text-center">
+                                    <h2>Total No of Students</h2>
+                                </div>
+                                <div class="col-3 text-start">
+                                    <h1>310</h1>
+                                </div>
+                            </div>
+
+                            <div class="second question1-row row my-4">
+                                <div class="col-9 text-center">
+                                    <h2>Registered Students</h2>
+                                </div>
+                                <div class="col-3 text-start">
+                                    {{#if mathNo }}
+                                    <h1>{{mathNo}}</h1>
+                                    {{else}}
+                                    <h1>0</h1>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" style="background-color: blue; border-radius: 10px">
+                    <div class="text-center">
+                        <h4 class="text-white p-3"><b>Computer Science</b></h4>
+                    </div>
+                    <div class="question1-row row">
+                        <div class="one question1-row row my-4">
+                            <div class="col-9 text-center">
+                                <h2>Total No of Students</h2>
+                            </div>
+                            <div class="col-3 text-start">
+                                <h1>520</h1>
+                            </div>
+                        </div>
+                        <div class="second question1-row row my-4">
+                            <div class="col-9 text-center">
+                                <h2>Registered Students</h2>
+                            </div>
+                            <div class="col-3 text-start">
+                                {{#if cscNo }}
+                                <h1>{{cscNo}}</h1>
+                                {{else}}
+                                <h1>0</h1>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-row row px-5">
+                <div class="col-md-6">
+                    <div class=" ml-3" style="background-color: purple; border-radius: 10px">
+                        <div class="text-center">
+                            <h4 class="text-white p-3"><b>Statistics</b></h4>
+                        </div>
+                        <div class="question1-row row">
+                            <div class="one question1-row row my-4">
+                                <div class="col-9 text-center">
+                                    <h2>Total No of Students</h2>
+                                </div>
+                                <div class="col-3 text-start">
+                                    <h1>190</h1>
+                                </div>
+                            </div>
+
+                            <div class="second question1-row row my-4">
+                                <div class="col-9 text-center">
+                                    <h2>Registered Students</h2>
+                                </div>
+                                <div class="col-3 text-start">
+                                    {{#if statNo }}
+                                    <h1>{{statNo}}</h1>
+                                    {{else}}
+                                    <h1>0</h1>
+                                    {{/if}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6" style="background-color: brown; border-radius: 10px">
+                    <div class="text-center">
+                        <h4 class="text-white p-3"><b>Overall Students</b></h4>
+                    </div>
+                    <div class="question1-row row">
+                        <div class="one question1-row row my-4">
+                            <div class="col-9 text-center">
+                                <h2>Total No of Students</h2>
+                            </div>
+                            <div class="col-3 text-start">
+                                <h1>1020</h1>
+                            </div>
+                        </div>
+
+                        <div class="second question1-row row my-4">
+                            <div class="col-9 text-center">
+                                <h2>Registered Students</h2>
+                            </div>
+                            <div class="col-3 text-start">
+                                {{#if overAll }}
+                                <h1>{{overAll}}</h1>
+                                {{else}}
+                                <h1>0</h1>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer}}
